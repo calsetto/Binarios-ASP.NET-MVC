@@ -1,0 +1,28 @@
+﻿@model Binarios.Models.NumerosModel
+
+@{
+    ViewData["Title"] = "Resultado";
+}
+
+<div class="text-center">
+    <h1>Resultado</h1>
+</div>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Numeros Introducidos</th>
+            <th scope="col">Numeros Binarios</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int x = 0; x < Model.Numeros.Count; x++)
+        {
+            <tr>
+                <th scope="row">@Model.Numeros[x]</th>
+                <th scope="row">@Model.Binarios[x]</th>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
